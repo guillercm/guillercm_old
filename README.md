@@ -1,7 +1,7 @@
 > ⚠️ **Nota importante**
 > 
 > Este es **mi portfolio anterior**.  
-> Puedes ver mi portfolio actualizado en el siguiente enlace:  
+> Puedes ver mi portfolio actual en el siguiente enlace:  
 > 👉 [guillercm.github.io/guillercm](https://guillercm.github.io/guillercm/)
 
 
