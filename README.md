@@ -37,7 +37,7 @@
 ## Sobre mi
 
 <!-- - 🌱 Actualmente estoy aprendiendo **java** -->
-- 👨‍💻 Todos mis proyectos están disponibles en [https://guillercm.github.io/guillercm/](./index.html)
+- 👨‍💻 Todos mis proyectos están disponibles en [https://guillercm.github.io/guillercm/](https://guillercm.github.io/guillercm_old/)
 - 📫 Puedes contactarme con **guillermo.ruiz.cortina.martinez@gmail.com**
 <br>
 
