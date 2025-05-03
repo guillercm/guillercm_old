@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <title>guillermo</title>
+  <meta charset="utf-8">
+  <meta http-equiv="Expires" content="0">
+  <meta http-equiv="Last-Modified" content="0">
+  <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <script>const version = 8;</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <!-- <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="estilos/estilos.css">
+  <link rel="shortcut icon" href="imagenes/perfil.png" />
+  <script src="scripts/data.js" type="text/javascript"></script>
+  <script src="scripts/peces.js" type="text/javascript" ></script>
+  <script src="scripts/script.js" type="text/javascript" ></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> -->
+</head>
+<body>
+  <input type="checkbox" class="d-none" id="checkbox">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary prevent-select">
+    <div class="container-fluid justify-content-around">
+      <a class="navbar-brand nombre" onclick="clickCheckbox(false)" href="#"></a>
+      <a class="navbar-brand enlaceOcultar" onclick="clickCheckbox()" href="#inicio">Sobre mi</a>
+      <a class="navbar-brand enlaceOcultar" onclick="clickCheckbox()" href="#misProyectos">Mis Proyectos</a>
+      <a class="navbar-brand enlaceOcultar" onclick="clickCheckbox()" href="#certificados">Certificados</a>
+      <a class="navbar-brand enlaceOcultar" onclick="clickCheckbox()" href="#contacto">Contacto</a>
+      <label class="navbar-brand menu-hamburguesa" for="checkbox">
+        <a class="navbar-brand menu-hamburguesa" >
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path></svg>
+        </a>
+      </label>
+    </div>
+  </nav>
+  
+  
+  <div id="divPeces"  class="divPeces position-relative prevent-select">
+    <div class="burbuja burbujaPrincipal">
+      <span class="nombre"></span>
+      <span class="profesion"></span>
+    </div>
+    <div class="burbuja burbujaFondo" style="left: 22%; animation-delay: 1s"></div>
+    <div class="burbuja burbujaFondo" style="left: 25%;"></div>
+    <div class="burbuja burbujaFondo" style="left: 31%; animation-delay: 3s"></div>
+    <div class="burbuja burbujaFondo" style="left: 35%; animation-delay: 3.2s"></div>
+    <div class="burbuja burbujaFondo" style="left: 37%; animation-delay: 2.8s"></div>
+    <div class="burbuja burbujaFondo" style="left: 83%; animation-delay: 1.3s"></div>
+    <div class="burbuja burbujaFondo" style="left: 80%; animation-delay: 0.7s"></div>
+    <div class="burbuja burbujaFondo" style="left: 86%; animation-delay: 0.5s"></div>
+    <div class="algas algas3 giroHorizontal" style="left: 5%;"></div>
+    <div class="algas algas1" style="left: 20%;"></div>
+    <div class="algas algas2" style="left: 58%;"></div>
+    <div class="algas algas3" style="right: 2%;"></div>
+    <div class="decoracionMarina estrella" style="left: 35%;"></div>
+    <div class="decoracionMarina conchaMarina" style="left: 70%;"></div>
+    <div class="decoracionMarina conchaMarina giroHorizontal" style="left: 1%; bottom: -8px"></div>
+  </div>
+  <div id="inicio" class="arena">
+    <h2 class="text-decoration-underline">Sobre mí</h2>
+    <div id="descripcionPortafolio">
+
+    </div>
+    <br>
+    <div class="container p-0 m-0">
+      <div class="row">
+        <div class="col-md-6">
+          <!-- Contenido de la primera columna -->
+          <h3 class="text-decoration-underline">Estudios</h3>
+          <div id="estudios">
+            
+          </div>
+        </div>
+        <!-- <div class="col-md-2"></div> -->
+        <div class="col-md-6">
+          <!-- Contenido de la segunda columna -->
+          <h3 class="text-decoration-underline mb-3 tecnologias-title">Tecnologías</h3>
+          <div class="d-flex flex-wrap gap-7" id="tecnologias">
+            
+          </div>
+          <h3 class="text-decoration-underline mt-4">Tecnologías Complementarias</h3>
+          <div class="d-flex flex-wrap gap-7" id="tecnologias2">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>  
+  <div class="arena arena2" id="misProyectos">
+    <h2 class="text-decoration-underline">Mis proyectos</h2>
+    <br>
+    <div class="proyectos">
+      <div class="container">
+        <div class="row" id="proyectos">
+          <!-- Proyecto 1 -->
+          <div class="col-md-4">
+            <div class="card mb-4">
+              <!-- <img src="imagenes/lenguajes/angular.png" class="card-img-top" alt="Imagen del Proyecto"> -->
+              <div class="card-body">
+                <h4 class="card-title">Nombre del Proyecto</h4>
+                <p class="card-text small">Descripción del proyecto. Puedes incluir detalles y características clave aquí.</p>
+                <a href="enlace-al-repositorio-github" target="_blank" class="btn btn-primary">
+                    <div class="d-flex align-items-center">
+                      <svg fill="#ffffff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" class="w-5 fill-primary">
+                      <path class="pathGithub"></path>
+                    </svg>
+                    <span class="ms-2">GitHub</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Fin proyecto -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="certificados" class="arena d-flex flex-column align-items-center justify-content-center text-center">
+    <h2 class="text-decoration-underline">Certificados</h2>
+    <div class="scroll-container" id="imgCertificados">
+      <img src="certificados/api_rest_node.png" class="img-fluid" alt="Certificado 1">
+      <img src="certificados/api_rest_node.png" class="img-fluid" alt="Certificado 1">
+    </div>
+    <div id="div-dots"></div>
+  </div>
+  
+  <div id="contacto" class="arena arena2 d-flex flex-column align-items-center justify-content-center text-center">
+    <h2 class="text-decoration-underline">Contacto</h2>
+    <br>
+    <!-- Información de correo electrónico -->
+    <div class="d-flex align-items-center mb-4"> <!-- Añadido mb-4 para más separación -->
+      <img src="imagenes/iconos/correo_blanco.png" alt="Icono de correo" class="iconosContacto img-fluid me-2" style="max-height: 24px;">
+      <span id="correo"></span>
+    </div>
+    <div class="d-flex align-items-center mb-4"> <!-- Añadido mb-4 para más separación -->
+      <img src="imagenes/iconos/ubicacion_blanco.png" alt="Icono de correo" class="iconosContacto img-fluid me-2" style="width: auto;max-height: 24px;">
+      <span id="ubicacion"></span>
+    </div>
+    <a href="curriculum.pdf" class="mb-4" target="_blank">Ver CV</a>
+    <div class="d-flex align-items-center mb-4"> <!-- Añadido mb-4 para más separación -->
+      <a href="" target="_blank" id="enlaceGithub">
+        <div class="iconosContacto me-2 d-flex align-items-center" title="GitHub">
+          <svg fill="#ffffff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" class="w-5 fill-primary">
+            <path class="pathGithub"></path>
+          </svg>
+        </div>
+      </a>
+      <a href="" target="_blank" id="enlaceInfoJobs">
+        <img src="imagenes/iconos/infojobs.png" alt="InfoJobs" title="InfoJobs" class="iconosContacto img-fluid me-2" style="max-height: 24px;">
+      </a>
+      <a href="" target="_blank" id="enlaceLinkedIn">
+        <img src="imagenes/iconos/linkedin.png" alt="LinkedIn" title="LinkedIn" class="iconosContacto img-fluid me-2" style="max-height: 24px;">
+      </a>
+    </div>
+  </div>
+  
+  
+  
+
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script> -->
+  
+</body>
+</html>
+<!-- https://sbetav.me/#work -->

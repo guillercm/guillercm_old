@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Curriculum</title>
+    <style>
+
+        :root {
+            --color-principal: rgb(210, 210, 210);
+            --ancho-folio: 21cm;
+            --alto-folio: 29.7cm;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box !important;
+        }
+        body {
+            background-color: black;
+            width: var(--ancho-folio);
+            height: var(--alto-folio);
+        }
+        #container {
+            width: var(--ancho-folio);
+            height: var(--alto-folio);
+            background-color: white;
+
+        }
+        .columna {
+            /* padding: 10px; */
+            height: var(--alto-folio);;
+            position: relative;
+        }
+        .columna-1 {
+            background-color: var(--color-principal);
+        }
+        #nombre h2 {
+            color: #636363 !important;
+        }
+        h3 {
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+        p {
+            margin: 0;
+        }
+        .imgContacto {
+            max-height: 24px;
+        }
+
+        #foto {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-image: url(imagenes/foto.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            border: 1px solid;
+        }
+
+        #tecnologias .col {
+            padding-left: 0;
+        }
+
+        @media print {
+            #descargarReadmy {
+                display: none;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <button id="descargarReadmy">Descargar READMY.MD</button>
+
+    <div id="container">
+            <div class="row m-0">
+              <div class="col-6 columna columna-1">
+                <div class="p-4">
+                    <h3 class="text-decoration-underline">SOBRE MÍ</h3>
+                    <div id="sobreMi" class="mt-2 fs-6">
+                        <!-- <p>sobre mi</p>
+                        <p>sobre mi</p> -->
+                    </div>
+                    <h3 class="text-decoration-underline mt-3">CONTACTO</h3>
+                    <div id="contactos" class="mt-2">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-1">
+                                    <img src="imagenes/iconos/correo.png" alt="Icono de correo" class="img-fluid me-2" style="max-height: 24px;">
+                                </div>
+                                <div class="col">
+                                    <span class="fs-5" >prueba@gmail.com</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="text-decoration-underline mt-3">CERTIFICADOS</h3>
+                    <div id="certificados">
+                        <!-- <div class="mt-3">
+                            <h6 class="mb-0">NOMBRE</h6>
+                            <p class="ms-4 mb-2">Fecha</p>
+                            <p class="ms-4">descripcion</p>
+                        </div> -->
+                    </div>
+                    <h3 class="text-decoration-underline mt-4">TECNOLOGÍAS</h3>
+                    <div id="tecnologias" class="container mt-2">
+                        <!-- <div class="row">
+                            <div class="col">
+                                <ul>
+                                    <li>html</li>
+                                    <li>css3</li>
+                                    <li>javascript</li>
+                                </ul>
+                            </div>
+                            <div class="col">
+                                <ul>
+                                    <li>php</li>
+                                    <li>java</li>
+                                </ul>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+              </div>
+              <div class="col-6 columna columna-2">
+                <div class="p-4">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col p-0">
+                                <div id="nombre"></div>
+                            </div>
+                            <div class="col p-0">
+                                <div id="foto"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div id="nombre"></div> -->
+                    <h3 id="profesion"></h3>
+                    <h3 class="text-decoration-underline mt-3">EXPERIENCIA LABORAL</h3>
+                    <div id="experienciaLaboral">
+                        <!-- <div class="mt-3">
+                            <h6 class="mb-0">Nombre del puesto</h6>
+                            <p class="ms-4">Nombre de la empresa</p>
+                            <p class="ms-4 mb-2">Fecha de inicio - Fecha de finalización</p>
+                            <div class="ms-4">
+                                <p></p>
+                                <p></p>
+                            </div>
+                        </div> -->
+                    </div>
+                    <h3 class="text-decoration-underline mt-3">FORMACIÓN</h3>
+                    <div id="formacion">
+                        <!-- <div class="mt-3">
+                            <h6 class="mb-0">NOMBRE / SIGLAS</h6>
+                            <p class="ms-4">instituto</p>
+                            <p class="ms-4 mb-2">Fecha</p>
+                        </div> -->
+                    </div>
+                </div>
+              </div>
+            </div>
+    </div>
+
+
+
+    <script src="scripts/data.js"></script>
+    <script>
+    document.getElementById("descargarReadmy").addEventListener("click", function() {
+        // Contenido del archivo (puedes cambiarlo según tus necesidades)
+        const contenido = getReadmyMd();
+
+        // Crear un Blob (objeto binario) con el contenido
+        const blob = new Blob([contenido], { type: "text/plain" });
+
+        // Crear una URL para el Blob
+        const url = window.URL.createObjectURL(blob);
+
+        // Crear un elemento <a> para descargar el archivo
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "README.md"; // Nombre del archivo que se descargará
+
+        // Simular un clic en el enlace para iniciar la descarga
+        a.click();
+
+        // Liberar la URL del Blob
+        window.URL.revokeObjectURL(url);
+    });
+
+    </script>
+
+    <script>
+        nombre.innerHTML =
+        `<h2>${dataJson.datosPersonales.nombre}<br>${dataJson.datosPersonales.primerApellido}<br>${dataJson.datosPersonales.segundoApellido}</h2>`
+        ;
+        profesion.textContent = dataJson.datosPersonales.puesto;
+        experienciaLaboral.innerHTML = '';
+        for (let exp of dataJson.experienciaLaboral) {
+            if (exp.mostrar === false) continue;
+            let descripcionHTML = "";
+            for (let desc of exp.descripcion) {
+                descripcionHTML += `<p>${desc}</p>`;
+            }
+            experienciaLaboral.innerHTML += `
+            <div class="mt-2">
+                <h6 class="mb-0">${exp.puesto}</h6>
+                <p class="ms-4">${exp.empresa}</p>
+                <p class="ms-4 mb-2">${exp.fecha}</p>
+                <div class="ms-4">
+                    ${descripcionHTML}
+                </div>
+            </div>
+            `;
+        }
+        formacion.innerHTML = '';
+        for (let form of dataJson.formacion) {
+            formacion.innerHTML += `
+                <div class="mt-2">
+                    <h6 class="mb-0">${form.siglas} (${form.nombre})</h6>
+                    <p class="ms-4">${form.instituto}</p>
+                    <p class="ms-4 mb-2">${form.fecha}</p>
+                </div>
+            `;
+        }
+        certificados.innerHTML = '';
+        for (let certificado of  dataJson.certificados) {
+            certificados.innerHTML += `
+                <div class="mt-3">
+                    <h6 class="mb-0">${certificado.nombre}</h6>
+                    ${certificado.fecha ? `<p class="ms-4 mb-0">${certificado.fecha}</p>` : ''}
+                    <p class="ms-4">${certificado.descripcion}</p>
+                </div>
+            `;
+        }
+
+        sobreMi.innerHTML = '';
+        for (let descripcion of dataJson.descripcionCurriculum) {
+            sobreMi.innerHTML += `<p>${descripcion}</p>`;
+        }
+
+        let getContacto = (imagen, texto, rounded = false) => {
+            return `
+            <div class="row mt-1">
+                <div class="col-2 text-center">
+                    <img src="imagenes/iconos/${imagen}" alt="${imagen}" class="imgContacto img-fluid ${rounded ? 'rounded-circle' : ''}">
+                </div>
+                <div class="col-10" style="padding-left: 0;">
+                    <span class="fs-6" >${texto}</span>
+                </div>
+            </div>
+            `;
+        }
+
+        const contactosStr = [
+            getContacto("correo.png", dataJson.datosPersonales.correo),
+            getContacto("telefono.png", dataJson.datosPersonales.telefono),
+            getContacto("ubicacion.png", dataJson.datosPersonales.ubicacion),
+            getContacto("github.png", dataJson.redesSociales.gitHub, true),
+            getContacto("web.png", dataJson.datosPersonales.portfolio)
+        ];
+
+        contactos.innerHTML = '';
+        for (let c of contactosStr) {
+            contactos.innerHTML += c;
+        }
+
+        tecnologias.innerHTML = '';
+        const tecnologiasData = dataJson.tecnologias;
+        const halfLength = Math.ceil(tecnologiasData.length / 2);
+        const tecnologiasColumn1 = tecnologiasData.slice(0, halfLength);
+        const tecnologiasColumn2 = tecnologiasData.slice(halfLength);
+
+        // Agrega las tecnologías a las columnas
+        tecnologias.innerHTML += `
+            <div class="row fs-6 mt-3">
+                <div class="col">
+                    <ul>
+                        ${tecnologiasColumn1.map(tecnologia => `<li>${tecnologia}</li>`).join('')}
+                    </ul>
+                </div>
+                <div class="col">
+                    <ul>
+                        ${tecnologiasColumn2.map(tecnologia => `<li>${tecnologia}</li>`).join('')}
+                    </ul>
+                </div>
+            </div>
+        `;
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
