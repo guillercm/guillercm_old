@@ -10,7 +10,7 @@
 
 
 
-<h1 align="left">Hola 👋, soy <a href="./index.html">
+<h1 align="left">Hola 👋, soy <a href="https://guillercm.github.io/guillercm_old/">
 <span>
     <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=32&duration=2500&pause=500&width=435&lines=guillercm;Desarrollador+Software" alt="guillercm" title="guillercm"
   style="margin-bottom: -26.5px;background: transparent;max-width: 100%;margin-left: 5px;" />
@@ -20,7 +20,7 @@
 </h1>
 
 </div>
-<a href="./index.html" target="_blank">
+<a href="https://guillercm.github.io/guillercm_old/" target="_blank">
     <img src="imagenes/fondo.png" title="guillercm (Desarrollador Software)" alt="guillercm (Desarrollador Software)">
 </a>
 <p align="left">
